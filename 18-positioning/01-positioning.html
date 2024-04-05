@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <title>Positioning</title>
+    <style>
+        /* position: static; default value, cannot use top, right etc properties */
+        /* position: relative; top, right, bottom, left and z-index can be used. Initial whitespace is maintained maintains document flow */
+        /* position: absolute; top, right etc relative to NEAREST PARENT with position property */
+        /* z-index: specifies the elevation of an element relative to other elements */
+
+        /* position: fixed; top, right etc relative to viewport */
+        /* position: sticky; top, right etc relative to viewport until a certain point */
+        /* position: initial; sets the position to its default value */
+        /* position: inherit; inherits the position from its parent element */
+        *, html, body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        p {
+            border: 1px solid black;
+            margin: 30px;
+            font-size: 2rem;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: olive;
+            margin: 0px;
+            top: 400px;
+            display: inline-block;
+        }
+
+        .box span {
+            color: white;
+            background-color: orangered;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+
+        #static {
+            background-color: magenta;
+            left: 23px;
+        }
+
+        #relative {
+            position: relative;
+            top: 40px;
+            left: 20px;
+            z-index: -1;
+            background-color: yellow;
+        }
+
+        .absolute {
+            position: absolute;
+            right: 0px;         
+            background-color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Positioning</h1>
+    <p id="static">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, dolores! Lorem ipsum dolor sit
+        amet
+        consectetur adipisicing elit. Est, at.</p>
+    <p id="relative">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, dolores! Lorem ipsum dolor
+        sit amet
+        consectetur adipisicing elit. Est, at.</p>
+    <p id="static">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, dolores! Lorem ipsum dolor sit
+        amet
+        consectetur adipisicing elit. Est, at.</p>
+
+
+    <div class="box"></div>
+    <div class="box absolute">
+        
+    </div>
+    <div class="box">
+        <span>Hi</span>
+    </div>
+</body>
+
+</html>

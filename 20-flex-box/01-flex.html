@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <title>Flexbox</title>
+    <style>
+        html, body {
+            overflow-x: none;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 6rem;
+        }
+
+        .container {
+            border: 4px solid black;
+            width: 1200px;
+            margin: 40px auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+
+        .box {
+            width: 250px;
+            height: 250px;
+            font-size: 4rem;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<h1>Flexbox</h1>
+<div class="container">
+    <div class="box" style="background-color: #FF5722">1</div>
+    <div class="box" style="background-color: #FF9800">2</div>
+    <div class="box" style="background-color: #FFC107">3</div>
+    <div class="box" style="background-color: #FFEB3B">4</div>
+    <div class="box" style="background-color: #CDDC39">5</div>
+    <div class="box" style="background-color: #8BC34A">6</div>
+</div>
+
+<body>
+
+</body>
+
+</html>
