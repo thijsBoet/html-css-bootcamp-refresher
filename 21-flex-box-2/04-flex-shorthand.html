@@ -8,12 +8,6 @@
     <link rel="stylesheet" href="app.css">
     <title>Flexbox</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         h1 {
             text-align: center;
             font-family: sans-serif;
@@ -21,9 +15,9 @@
         }
 
         .container {
-            border: 4px solid #333;
+            border: 4px solid black;
             width: 70%;
-            height: 1000px;
+            height: 1500px;
             margin: 40px auto;
             display: flex;
             flex-direction: row;
@@ -33,20 +27,18 @@
 
         .sidebar {
             background-color: palevioletred;
-            width: 300px;
-            flex-shrink: 10;
-            /* flex-grow: 1; */
-            /* max-width: 200px; */
+            /* flex-basis: 200px; */
+            /* flex-shrink: 1; */
+            /* flex: initial; */
+            width: 200px;
+            flex: initial;
         }
 
         p {
-            background-color: pink;
-            padding: 1rem;
-            width: 1000px;
-            flex-shrink: 1;
-            flex-grow: 1;
-            /* height: 100%; */
-            /* flex-grow: 10; */
+            background-color: darkseagreen;
+            margin: 0;
+            width: 500px;
+            flex: auto;
         }
     </style>
 </head>
@@ -85,9 +77,9 @@
         itaque molestiae, veniam officia obcaecati doloremque cum fugiat porro nemo. Atque dignissimos voluptas
         consectetur quidem voluptatem aliquid beatae?
     </p>
-    <div class="sidebar">
+    <!-- <div class="sidebar">
         I AM SIDEBAR
-    </div>
+    </div> -->
 
 </div>
 

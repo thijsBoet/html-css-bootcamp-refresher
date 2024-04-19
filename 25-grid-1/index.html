@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <title>Grid</title>
+    <style>
+        /* Normalize */
+        *, 
+        *::before, 
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            height: 700px;
+            width: 80%;
+            margin: 200px auto;
+            background-color: black;
+            box-shadow: 0 6px 20px rgb(0 0 0 / 0.2);
+            display: grid;
+            /* As wide as the content & no wider then 300px */
+            grid-template-columns: repeat(3, fit-content(300px));
+            /* grid-template: repeat(3, minmax(175px, 1fr)) / repeat(3, minmax(175px, auto)); */
+            /* grid-template-rows: 1fr 1fr; */
+            /* grid-template: repeat(2, 1fr) / repeat(3, 1fr); */
+            /* column-gap: 15px;
+            row-gap: 25px; */
+            gap: 10px 40px;
+        }
+
+        .box {
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" style="background-color: #E53935">I am as wide as my content</div>
+        <div class="box" style="background-color: #D81B60">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum consequuntur ducimus ipsam. Eum qui autem quas consequatur debitis laborum quo.</div>
+        <div class="box" style="background-color: #8E24AA">THIRD</div>
+        <div class="box" style="background-color: #5E35B1">FOURTH</div>
+        <div class="box" style="background-color: #3949AB">FIFTH</div>
+        <div class="box" style="background-color: #1E88E5">SIXTH</div>
+        <div class="box" style="background-color: #00ACC1">SEVENTH</div>
+        <div class="box" style="background-color: #00897B">EIGHTH</div>
+    </div>
+
+
+</body>
+
+</html>

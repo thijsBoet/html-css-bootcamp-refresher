@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="app.css">
+  <title>Grid</title>
+  <style>
+    /* Normalize */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      height: 700px;
+      width: 800px;
+      margin: 50px auto;
+      background-color: black;
+      box-shadow: 0 6px 20px rgb(0 0 0 / 0.2);
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .box {
+      color: white;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    .fit {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    /* .first {
+      grid-row-start: 2;
+    } */
+
+    /* .second {
+      grid-area: b;
+    }
+
+    .third {
+      grid-area: c;
+    }
+
+    .fourth {
+      grid-area: d;
+    } */
+  </style>
+</head>
+
+<body>
+  <h1>Container fill</h1>
+  <p>Does not fit the empty container space</p>
+  <div class="container">
+    <div class="box first" style="background-color: #E53935">FIRST</div>
+    <div class="box second" style="background-color: #D81B60">SECOND</div>
+    <div class="box third" style="background-color: #8E24AA">THIRD</div>
+    <div class="box fourth" style="background-color: #5E35B1">FOURTH</div>
+    <!-- <div class="box" style="background-color: #3949AB">FIFTH</div>
+    <div class="box" style="background-color: #1E88E5">SIXTH</div>
+    <div class="box" style="background-color: #00ACC1">SEVENTH</div>
+    <div class="box" style="background-color: #00897B">EIGHTH</div>
+    <div class="box first" style="background-color: #E53935">FIRST</div>
+    <div class="box second" style="background-color: #D81B60">SECOND</div>
+    <div class="box third" style="background-color: #8E24AA">THIRD</div>
+    <div class="box fourth" style="background-color: #5E35B1">FOURTH</div>
+    <div class="box" style="background-color: #3949AB">FIFTH</div>
+    <div class="box" style="background-color: #1E88E5">SIXTH</div>
+    <div class="box" style="background-color: #00ACC1">SEVENTH</div>
+    <div class="box" style="background-color: #00897B">EIGHTH</div> -->
+    
+  </div>
+  <h1>Container fit</h1>
+  <p>Fits the empty container space</p>
+  <div class="container fit">
+    <div class="box first" style="background-color: #E53935">FIRST</div>
+    <div class="box second" style="background-color: #D81B60">SECOND</div>
+    <div class="box third" style="background-color: #8E24AA">THIRD</div>
+    <div class="box fourth" style="background-color: #5E35B1">FOURTH</div>
+  </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <title>Flexbox</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            background: linear-gradient(180deg, cyan, purple);
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 5px;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+        }
+
+        .card footer {
+            background-color: slateblue;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: auto;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>Card Demo</h1>
+    <div class="container">
+        <div class="card">
+            <h2>Card Heading</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae cum cumque, dicta cupiditate earum nam.
+            </p>
+            <footer>Card Footer</footer>
+        </div>
+        <div class="card">
+            <h2>Card Heading</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae cum cumque, dicta cupiditate earum nam.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque error odio id officia provident tempore!
+            </p>
+            <footer>Card Footer</footer>
+        </div>
+        <div class="card">
+            <h2>Card Heading</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+            <footer>Card Footer</footer>
+        </div>
+    </div>
+</body>
+
+</html>
